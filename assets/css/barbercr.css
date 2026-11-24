@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+    --bcr-bg: #09090b;
+    --bcr-surface: #121216;
+    --bcr-surface-2: #1a1a21;
+    --bcr-border: #2b2b36;
+    --bcr-red: #d90429;
+    --bcr-red-dark: #9b001c;
+    --bcr-red-glow: rgba(217, 4, 41, 0.35);
+    --bcr-text: #f4f4f6;
+    --bcr-muted: #9ca3af;
+}
+
+/* Fondo general oscuro */
+body {
+    background-color: var(--bcr-bg) !important;
+    background-image: radial-gradient(circle at top center, #22060c 0%, #09090b 60%) !important;
+    color: var(--bcr-text) !important;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif !important;
+}
+
+/* Tarjeta principal de reservas */
+#main .frame-container {
+    background-color: var(--bcr-surface) !important;
+    border: 1px solid var(--bcr-border) !important;
+    border-radius: 18px !important;
+    box-shadow: 0 22px 50px rgba(0, 0, 0, 0.8) !important;
+    overflow: hidden;
+}
+
+/* Franja decorativa tipo poste de barbero (en reservas y en barra admin) */
+#main .frame-container::before,
+nav.navbar::before {
+    content: "";
+    display: block;
+    height: 5px;
+    width: 100%;
+    background: repeating-linear-gradient(
+        -45deg,
+        #d90429,
+        #d90429 12px,
+        #ffffff 12px,
+        #ffffff 24px,
+        #121216 24px,
+        #121216 36px
+    );
+}
+
+/* Encabezado público y barra superior del admin */
+#header,
+nav.navbar {
+    background: linear-gradient(180deg, #18181f 0%, #121216 100%) !important;
+    border-bottom: 1px solid var(--bcr-border) !important;
+}
+
+nav.navbar {
+    flex-wrap: wrap;
+    padding-top: 0 !important;
+}
+
+#company-name,
+.navbar-brand {
+    font-family: 'Oswald', sans-serif !important;
+    letter-spacing: 1px !important;
+    text-transform: uppercase !important;
+    color: #ffffff !important;
+}
+
+/* Títulos principales */
+.frame-title, h1, h2, h3, h4, .modal-title {
+    font-family: 'Oswald', sans-serif !important;
+    letter-spacing: 0.6px !important;
+    text-transform: uppercase !important;
+    color: #ffffff !important;
+}
+
+/* Indicadores de pasos (1, 2, 3, 4) */
+.book-step {
+    background-color: var(--bcr-surface-2) !important;
+    border: 1px solid var(--bcr-border) !important;
+    color: var(--bcr-muted) !important;
+    border-radius: 10px !important;
+    font-weight: 700 !important;
+    transition: all 0.25s ease !important;
+}
+
+.book-step.active-step {
+    background: linear-gradient(135deg, var(--bcr-red), var(--bcr-red-dark)) !important;
+    border-color: var(--bcr-red) !important;
+    color: #ffffff !important;
+    box-shadow: 0 0 15px var(--bcr-red-glow) !important;
+    transform: scale(1.08);
+}
+
+/* Apartados y tarjetas (cliente y admin) */
+.card,
+.modal-content,
+#appointment-details,
+#customer-details {
+    background-color: var(--bcr-surface) !important;
+    border: 1px solid var(--bcr-border) !important;
+    border-radius: 14px !important;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45) !important;
+}
+
+.card-header,
+.modal-header {
+    background-color: var(--bcr-surface-2) !important;
+    border-bottom: 1px solid var(--bcr-border) !important;
+}
+
+.modal-footer {
+    background-color: var(--bcr-surface-2) !important;
+    border-top: 1px solid var(--bcr-border) !important;
+}
+
+/* Inputs y selectores decorados */
+.form-select,
+.form-control,
+#select-service,
+#select-provider,
+#select-timezone {
+    background-color: var(--bcr-surface-2) !important;
+    color: #ffffff !important;
+    border: 1px solid var(--bcr-border) !important;
+    border-radius: 11px !important;
+    padding: 10px 14px !important;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+.form-select:focus,
+.form-control:focus {
+    border-color: var(--bcr-red) !important;
+    box-shadow: 0 0 0 3px var(--bcr-red-glow) !important;
+}
+
+/* Caja descriptiva del servicio */
+#service-description {
+    background-color: var(--bcr-surface-2) !important;
+    border: 1px solid var(--bcr-border) !important;
+    border-left: 4px solid var(--bcr-red) !important;
+    border-radius: 10px !important;
+    padding: 12px 16px !important;
+    color: #e5e7eb !important;
+    margin-top: 12px !important;
+}
+
+/* Calendario de reserva (Flatpickr) */
+.flatpickr-calendar,
+.flatpickr-innerContainer,
+.flatpickr-rContainer,
+.flatpickr-days,
+.dayContainer,
+.flatpickr-weekdays {
+    background: var(--bcr-surface-2) !important;
+    background-color: var(--bcr-surface-2) !important;
+    border-color: var(--bcr-border) !important;
+    border-radius: 14px !important;
+}
+
+.flatpickr-months {
+    background-color: #18181f !important;
+    border-bottom: 1px solid var(--bcr-border) !important;
+    border-radius: 14px 14px 0 0 !important;
+    padding: 6px 0 !important;
+}
+
+span.flatpickr-weekday {
+    color: var(--bcr-muted) !important;
+    font-weight: 600 !important;
+}
+
+.flatpickr-day {
+    color: #f4f4f6 !important;
+    border-radius: 8px !important;
+    font-weight: 500 !important;
+}
+
+.flatpickr-day:hover {
+    background: #2b2b36 !important;
+    border-color: #2b2b36 !important;
+}
+
+.flatpickr-day.selected {
+    background: var(--bcr-red) !important;
+    border-color: var(--bcr-red) !important;
+    box-shadow: 0 0 12px var(--bcr-red-glow) !important;
+    font-weight: 700 !important;
+}
+
+.flatpickr-day.flatpickr-disabled,
+.flatpickr-day.prevMonthDay,
+.flatpickr-day.nextMonthDay {
+    color: #4b4b57 !important;
+}
+
+/* Botones de horas disponibles */
+.available-hour {
+    background-color: var(--bcr-surface-2) !important;
+    border: 1px solid var(--bcr-border) !important;
+    color: #f4f4f6 !important;
+    border-radius: 10px !important;
+    padding: 10px 14px !important;
+    font-weight: 600 !important;
+    margin-bottom: 8px !important;
+    transition: all 0.2s ease !important;
+}
+
+.available-hour:hover {
+    border-color: var(--bcr-red) !important;
+    background-color: #251318 !important;
+    transform: translateY(-1px);
+}
+
+.available-hour.selected-hour {
+    background: linear-gradient(135deg, var(--bcr-red), var(--bcr-red-dark)) !important;
+    border-color: var(--bcr-red) !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 14px var(--bcr-red-glow) !important;
+}
+
+/* Botones principales en rojo BarberCR (reservas y admin) */
+.btn-primary,
+.fc-button-primary,
+#button-next-1,
+#button-next-2,
+#button-next-3,
+#book-appointment-submit {
+    background: linear-gradient(135deg, var(--bcr-red) 0%, var(--bcr-red-dark) 100%) !important;
+    border: 1px solid var(--bcr-red) !important;
+    border-radius: 10px !important;
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.4px !important;
+    box-shadow: 0 4px 14px var(--bcr-red-glow) !important;
+    transition: all 0.2s ease !important;
+}
+
+.btn-primary:hover,
+.fc-button-primary:hover,
+#button-next-1:hover,
+#button-next-2:hover,
+#button-next-3:hover,
+#book-appointment-submit:hover {
+    filter: brightness(1.1);
+    transform: translateY(-1px);
+}
+
+/* Botones secundarios */
+.btn-outline-secondary,
+#button-back-2,
+#button-back-3,
+#button-back-4 {
+    background-color: transparent !important;
+    border: 1px solid var(--bcr-border) !important;
+    color: var(--bcr-muted) !important;
+    border-radius: 10px !important;
+}
+
+.btn-outline-secondary:hover {
+    background-color: var(--bcr-surface-2) !important;
+    color: #ffffff !important;
+}
+
+/* Pie de página */
+#frame-footer {
+    background-color: #0e0e12 !important;
+    border-top: 1px solid var(--bcr-border) !important;
+    color: var(--bcr-muted) !important;
+}

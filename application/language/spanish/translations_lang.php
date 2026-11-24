@@ -592,3 +592,11 @@ $lang['caldav_sync_failed_unreachable'] = 'No se pudo contactar con el servidor 
 $lang['caldav_private_host_warning'] = 'Este servidor está en una red privada. Al conectar se añadirá su host a las URL de conexión permitidas.';
 $lang['caldav_allow_host_and_connect'] = 'Permitir y conectar';
 // End
+
+// --- Personalización BarberCR ---
+$lang['provider'] = 'Barbero';
+$lang['providers'] = 'Barberos';
+$lang['select_provider'] = 'Elige tu barbero';
+$lang['any_provider'] = 'Cualquier barbero disponible';
+$lang['appointment_details_was_sent_to_you'] = 'Tu espacio quedó reservado en la agenda.';
+$lang['check_spam_folder'] = 'Envía tu comprobante SINPE por WhatsApp para confirmar tu turno.';

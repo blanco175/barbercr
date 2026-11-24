@@ -108,7 +108,7 @@
                         <i class="fas fa-info-circle me-2"></i>
                         <?= lang('about') ?>
                     </a>
-                    <a class="dropdown-item text-danger" href="https://easyappointments.org/premium" target="_blank">
+                    <a class="dropdown-item text-danger" href="#/premium" target="_blank">
                         <i class="fas fa-crown text-warning me-2"></i>
                         Premium
                     </a>
